@@ -1,0 +1,7 @@
+name:  UAT Automation suite
+listeners:
+  - com.uat.listener.TestsListenerAdapter
+  - org.uncommons.reportng.HTMLReporter
+  - org.uncommons.reportng.JUnitXMLReporter
+suite-files:
+  - ./TM_Project Suite.xml
