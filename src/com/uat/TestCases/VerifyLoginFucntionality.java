@@ -48,8 +48,8 @@ public class VerifyLoginFucntionality
 		try{
 //	System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir")+"\\src\\com\\uat\\config\\firefox.exe");
 //		driver = new InternetExplorerDriver(); 
-		 //driver = new FirefoxDriver();
-		driver = new ChromeDriver();
+		 driver = new FirefoxDriver();
+		//driver = new ChromeDriver();
 		
 		//driver.get("https://click2cloud.sharepoint.com/sites/UAT/TestV2.0/");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
