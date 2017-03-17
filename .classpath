@@ -55,6 +55,6 @@
 	<classpathentry kind="lib" path="NewJars/phantomjsdriver-1.2.1.jar"/>
 	<classpathentry kind="lib" path="NewJars/selenium-java-2.53.1-srcs.jar"/>
 	<classpathentry kind="lib" path="NewJars/selenium-java-2.53.1.jar"/>
-	<classpathentry kind="lib" path="NewJars/testng-6.9.9.jar"/>
+	<classpathentry kind="lib" path="NewJars/testng-6.11.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
