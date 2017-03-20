@@ -57,7 +57,7 @@ public class VerifyLoginFucntionality
 
 			firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
 			FirefoxProfile firefoxProfile = new FirefoxProfile();
-			WebDriver driver = new FirefoxDriver(firefoxBinary,firefoxProfile);
+			//WebDriver driver = new FirefoxDriver(firefoxBinary,firefoxProfile);
 			//System.setProperty("webdriver.firefox.driver", System.getProperty("/usr/bin/firefox");
 			//		driver = new InternetExplorerDriver(); 
 			driver = new FirefoxDriver(firefoxBinary,null);
