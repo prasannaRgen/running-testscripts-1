@@ -53,8 +53,8 @@
 	<classpathentry kind="lib" path="NewJars/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="NewJars/netty-3.5.7.Final.jar"/>
 	<classpathentry kind="lib" path="NewJars/phantomjsdriver-1.2.1.jar"/>
-	<classpathentry kind="lib" path="NewJars/selenium-java-2.53.1-srcs.jar"/>
-	<classpathentry kind="lib" path="NewJars/selenium-java-2.53.1.jar"/>
 	<classpathentry kind="lib" path="NewJars/testng-6.11.jar"/>
+	<classpathentry kind="lib" path="NewJars/selenium-java-2.39.0.jar"/>
+	<classpathentry kind="lib" path="NewJars/selenium-java-2.53.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

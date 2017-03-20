@@ -60,7 +60,7 @@ public class VerifyLoginFucntionality
 			WebDriver driver = new FirefoxDriver(firefoxBinary,firefoxProfile);
 			//System.setProperty("webdriver.firefox.driver", System.getProperty("/usr/bin/firefox");
 			//		driver = new InternetExplorerDriver(); 
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(firefoxBinary,null);
 			//driver = new ChromeDriver();
 		
 			//driver.get("https://click2cloud.sharepoint.com/sites/UAT/TestV2.0/");
