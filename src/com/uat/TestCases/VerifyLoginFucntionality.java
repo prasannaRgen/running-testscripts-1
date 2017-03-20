@@ -46,7 +46,7 @@ public class VerifyLoginFucntionality
 	public void verifyValidLogin(String Username, String Password, String sText) throws InterruptedException
 	{
 		try{
-//	System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir")+"\\src\\com\\uat\\config\\firefox.exe");
+	System.setProperty("webdriver.firefox.driver", System.getProperty("/usr/bin/firefox");
 //		driver = new InternetExplorerDriver(); 
 		 driver = new FirefoxDriver();
 		//driver = new ChromeDriver();
