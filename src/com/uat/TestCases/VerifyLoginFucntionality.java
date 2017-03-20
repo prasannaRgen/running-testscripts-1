@@ -3,13 +3,16 @@
  */
 package com.uat.TestCases;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -46,29 +49,38 @@ public class VerifyLoginFucntionality
 	public void verifyValidLogin(String Username, String Password, String sText) throws InterruptedException
 	{
 		try{
-	//System.setProperty("webdriver.firefox.driver", System.getProperty("/usr/bin/firefox");
-//		driver = new InternetExplorerDriver(); 
-		 driver = new FirefoxDriver();
-		//driver = new ChromeDriver();
+			String Xport = System.getProperty("lmportal.xvfb.id", ":1");
+
+			final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+
+			FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
+
+			firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
+			FirefoxProfile firefoxProfile = new FirefoxProfile();
+			WebDriver driver = new FirefoxDriver(firefoxBinary,firefoxProfile);
+			//System.setProperty("webdriver.firefox.driver", System.getProperty("/usr/bin/firefox");
+			//		driver = new InternetExplorerDriver(); 
+			driver = new FirefoxDriver();
+			//driver = new ChromeDriver();
 		
-		//driver.get("https://click2cloud.sharepoint.com/sites/UAT/TestV2.0/");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.get("http://uatvs-frontlayer-uatvs-frontlayer1.cloudapps.click2cloud.org/");
-		
-		
-		LoginPage login = new LoginPage(driver);
-		login.CloudLogin(Username, Password);
-		
-		driver.manage().window().maximize();	
-		login.clicktestManagement();
-		
-		Thread.sleep(2000);
-		
-		By testManagement_Id= By.id("testMgnt");
-		String testText = driver.findElement(testManagement_Id).getText();
-		
-		
-		Assert.assertEquals(testText, sText);
+			//driver.get("https://click2cloud.sharepoint.com/sites/UAT/TestV2.0/");
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.get("http://uatvs-frontlayer-uatvs-frontlayer1.cloudapps.click2cloud.org/");
+			
+			
+			LoginPage login = new LoginPage(driver);
+			login.CloudLogin(Username, Password);
+			
+			driver.manage().window().maximize();	
+			login.clicktestManagement();
+			
+			Thread.sleep(2000);
+			
+			By testManagement_Id= By.id("testMgnt");
+			String testText = driver.findElement(testManagement_Id).getText();
+			
+			
+			Assert.assertEquals(testText, sText);
 		}
 		catch(Exception e)
 		{
