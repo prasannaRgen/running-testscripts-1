@@ -6,9 +6,10 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.uat.base.TestBaseOld;
+import com.uat.base.TestBase;
 
-public class TestUtil extends TestBaseOld{
+
+public class TestUtil extends TestBase{
 
 	
 	// finds if the test suite is runnable 

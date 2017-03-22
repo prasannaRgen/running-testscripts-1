@@ -1,67 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name=" UAT Automation suite" duration-ms="0" started-at="2017-03-17T05:59:47Z" finished-at="2017-03-17T05:59:47Z">
+  <suite name="Default suite" duration-ms="29726" started-at="2017-03-22T10:17:49Z" finished-at="2017-03-22T10:18:19Z">
     <groups>
     </groups>
-  </suite> <!--  UAT Automation suite -->
-  <suite name="TM_Project Suite" duration-ms="43647" started-at="2017-03-17T05:59:01Z" finished-at="2017-03-17T05:59:45Z">
-    <groups>
-    </groups>
-    <test name="VerifyLogin" duration-ms="43647" started-at="2017-03-17T05:59:01Z" finished-at="2017-03-17T05:59:45Z">
-      <class name="com.uat.TestCases.VerifyLoginFucntionality">
-        <test-method status="PASS" signature="verifyValidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.uat.TestCases.VerifyLoginFucntionality@68c72235]" name="verifyValidLogin" duration-ms="24814" started-at="2017-03-17T11:29:01Z" data-provider="getTestData" finished-at="2017-03-17T11:29:26Z">
+    <test name="Default test" duration-ms="29726" started-at="2017-03-22T10:17:49Z" finished-at="2017-03-22T10:18:19Z">
+      <class name="com.uat.TestCases.VerifyStartEndDateValidation">
+        <test-method status="PASS" signature="checkAndInitialize()[pri:0, instance:com.uat.TestCases.VerifyStartEndDateValidation@6ba0ac]" name="checkAndInitialize" is-config="true" duration-ms="870" started-at="2017-03-22T15:47:49Z" finished-at="2017-03-22T15:47:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAndInitialize -->
+        <test-method status="PASS" signature="verifyStartEndDateValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.uat.TestCases.VerifyStartEndDateValidation@6ba0ac]" name="verifyStartEndDateValidation" duration-ms="27838" started-at="2017-03-22T15:47:50Z" data-provider="getTestData" finished-at="2017-03-22T15:48:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[testuser@gmail.com]]>
+                <![CDATA[Version Lead]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[123]]>
+                <![CDATA[UAT Automation Projects Suite]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Test Management]]>
+                <![CDATA[Project Create and Edit Portfolio]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Verify Start End Date]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1/6/2017]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[24/03/2017]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[test User]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[End Dat should always be greater or equal to the Start Dat!]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyValidLogin -->
-        <test-method status="PASS" signature="CloseDriver()[pri:0, instance:com.uat.TestCases.VerifyLoginFucntionality@68c72235]" name="CloseDriver" is-config="true" duration-ms="2141" started-at="2017-03-17T11:29:26Z" finished-at="2017-03-17T11:29:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseDriver -->
-        <test-method status="PASS" signature="verifyValidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.uat.TestCases.VerifyLoginFucntionality@68c72235]" name="verifyValidLogin" duration-ms="15938" started-at="2017-03-17T11:29:28Z" data-provider="getTestData" finished-at="2017-03-17T11:29:44Z">
+        </test-method> <!-- verifyStartEndDateValidation -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.uat.TestCases.VerifyStartEndDateValidation@6ba0ac]" name="afterMethod" is-config="true" duration-ms="948" started-at="2017-03-22T15:48:18Z" finished-at="2017-03-22T15:48:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[test1@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Test Management]]>
+                <![CDATA[[TestResult name=verifyStartEndDateValidation status=SUCCESS method=VerifyStartEndDateValidation.verifyStartEndDateValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.uat.TestCases.VerifyStartEndDateValidation@6ba0ac] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyValidLogin -->
-        <test-method status="PASS" signature="CloseDriver()[pri:0, instance:com.uat.TestCases.VerifyLoginFucntionality@68c72235]" name="CloseDriver" is-config="true" duration-ms="677" started-at="2017-03-17T11:29:44Z" finished-at="2017-03-17T11:29:45Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="reportTestResult()[pri:0, instance:com.uat.TestCases.VerifyStartEndDateValidation@6ba0ac]" name="reportTestResult" is-config="true" duration-ms="70" started-at="2017-03-22T15:48:19Z" finished-at="2017-03-22T15:48:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CloseDriver -->
-      </class> <!-- com.uat.TestCases.VerifyLoginFucntionality -->
-    </test> <!-- VerifyLogin -->
-  </suite> <!-- TM_Project Suite -->
+        </test-method> <!-- reportTestResult -->
+      </class> <!-- com.uat.TestCases.VerifyStartEndDateValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

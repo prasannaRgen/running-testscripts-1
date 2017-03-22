@@ -1,0 +1,7 @@
+21/03/2017 17:46:01 devpinoyLogger Loading Property files
+21/03/2017 17:46:01 devpinoyLogger Loaded Property files successfully
+21/03/2017 17:46:01 devpinoyLogger Loading XLS Files
+21/03/2017 17:46:01 devpinoyLogger Loaded XLS Files successfully
+21/03/2017 17:46:01 devpinoyLogger Beginning test case 'VerifyStartEndDateValidation'.
+21/03/2017 17:46:08 devpinoyLogger Trying login for role Version Lead
+21/03/2017 17:46:08 devpinoyLogger Role found in Users file. Fetching credentials

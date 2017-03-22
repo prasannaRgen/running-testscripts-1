@@ -3,12 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.uat.TestCases.VerifyLoginFucntionality">
+      <class name="com.uat.TestCases.VerifyStartEndDateValidation">
         <methods>
-          <include name="CloseDriver"/>
-          <include name="verifyValidLogin"/>
+          <include name="checkAndInitialize"/>
+          <include name="verifyStartEndDateValidation" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="reportTestResult"/>
         </methods>
-      </class> <!-- com.uat.TestCases.VerifyLoginFucntionality -->
+      </class> <!-- com.uat.TestCases.VerifyStartEndDateValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

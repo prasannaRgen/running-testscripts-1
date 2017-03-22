@@ -31,10 +31,16 @@
         <class name="com.uat.suite.tm_project.VerifyFieldsForCreNewProj" ></class>  
     </classes>
 </test>
- -->
+ 
  <test name="VerifyLogin">
     <classes>
         <class name="com.uat.TestCases.VerifyLoginFucntionality"></class>  
+    </classes>
+</test>
+-->
+<test name="VerifyStartEndDateValidation">
+    <classes>
+        <class name="com.uat.TestCases.VerifyStartEndDateValidation"></class>  
     </classes>
 </test>
 

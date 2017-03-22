@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [TM_Project Suite]">
-  <listeners>
-    <listener class-name="com.uat.listener.TestsListenerAdapter"/>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-  </listeners>
-  <test name="VerifyLogin(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.uat.TestCases.VerifyLoginFucntionality">
+      <class name="com.uat.TestCases.VerifyStartEndDateValidation">
         <methods>
-          <include name="CloseDriver"/>
-          <include name="verifyValidLogin"/>
+          <include name="checkAndInitialize"/>
+          <include name="verifyStartEndDateValidation" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="reportTestResult"/>
         </methods>
-      </class> <!-- com.uat.TestCases.VerifyLoginFucntionality -->
+      </class> <!-- com.uat.TestCases.VerifyStartEndDateValidation -->
     </classes>
-  </test> <!-- VerifyLogin(failed) -->
-</suite> <!-- Failed suite [TM_Project Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
