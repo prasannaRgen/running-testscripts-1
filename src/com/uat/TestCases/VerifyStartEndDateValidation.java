@@ -108,6 +108,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 		    	testPassed = false;
 		    	TestUtil.reportDataSetResult(TM_projectSuiteXls, this.getClass().getSimpleName(), count+2, "FAIL");
 				TestUtil.printComments(TM_projectSuiteXls, this.getClass().getSimpleName(), count+2, result.getThrowable().getMessage());
+				System.out.println("Failed - Taking Screenshot");
 				TestUtil.takeScreenShot(this.getClass().getSimpleName(), this.getClass().getSimpleName());
 	
 		    }
