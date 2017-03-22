@@ -136,11 +136,20 @@ public class TestUtil extends TestBase{
 		
 		public static void takeScreenShot(String testCaseName, String fileName) 
 		{
+			System.out.println("Failed - Taking Screenshot");
+			String filePath = null;
 			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			
 			try 
 		    {
-				FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\screenshots\\"+screenshotDateTime+"\\"+testCaseName+"\\"+fileName+".jpg"));
+				System.out.println("Copying file");
+				
+				if (osName.startsWith("Window"))
+					filePath = System.getProperty("user.dir")+"\\screenshots\\"+screenshotDateTime+"\\"+testCaseName+"\\"+fileName+".jpg";
+				else
+					filePath = System.getProperty("user.dir")+"/screenshots/"+screenshotDateTime+"/"+testCaseName+"/"+fileName+".jpg";
+				
+				FileUtils.copyFile(scrFile, new File(filePath));
 		    } 
 			catch (Exception e) 
 			{		   
