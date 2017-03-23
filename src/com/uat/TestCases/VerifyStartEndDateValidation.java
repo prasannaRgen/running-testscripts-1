@@ -25,6 +25,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 	String runmodes[]=null;
 	int count=-1;
 	private boolean testPassed = false;
+	Utility utilRecorder;
 	
 	
 	// Runmode of test case in a suite
@@ -42,12 +43,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 		}
 		runmodes=TestUtil.getDataSetRunmodes(TM_projectSuiteXls, this.getClass().getSimpleName());
 		
-		/*Utility utilRecorder = new Utility();
 		
-		if (osName.startsWith("WINDOW"))
-			utilRecorder.startRecording(System.getProperty("user.dir")+"\\Videos\\"+extractPackageName(this.getClass().getPackage().toString())+"\\"+this.getClass().getSimpleName());
-		else
-			utilRecorder.startRecording(System.getProperty("user.dir")+"/Videos/"+extractPackageName(this.getClass().getPackage().toString())+"/"+this.getClass().getSimpleName());*/
 		
 				
 
@@ -64,6 +60,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 			String startDate, String endDate, String versionLead, String expectedMessage) throws InterruptedException
 	{		
 		
+		System.out.println("Started the test case "+this.getClass().getSimpleName());
 		count++;
 		
 		if(!runmodes[count].equalsIgnoreCase("Y")){
@@ -73,11 +70,30 @@ public class VerifyStartEndDateValidation extends TestBase {
 			throw new SkipException("Runmode for test set data no. "+(count+1)+" set to no");
 		}
 		
+		System.out.println("opening browser");
 		openBrowser();
+		
+		System.out.println("starting recording");
+		
+		utilRecorder = new Utility();
+		
+		try
+		{
+			if (osName.startsWith("WINDOW"))
+				utilRecorder.startRecording(System.getProperty("user.dir")+"\\Videos\\"+extractPackageName(this.getClass().getPackage().toString())+"\\"+this.getClass().getSimpleName());
+			else
+				utilRecorder.startRecording(System.getProperty("user.dir")+"/Videos/"+extractPackageName(this.getClass().getPackage().toString())+"/"+this.getClass().getSimpleName());
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 		Login login = new Login(eventfiringdriver);
 		
 		if (login.CloudLogin(role))
 		{
+			System.out.println("Login Successful");
 			login = null;
 			
 			Thread.sleep(2000);
@@ -88,10 +104,12 @@ public class VerifyStartEndDateValidation extends TestBase {
 			
 			waitForBlockUI();
 			
+			System.out.println("Creating new project");
 			project.createNewProject(groupName, portfolio, projectName, version, startDate, endDate, versionLead);
 			
 			String actualMessage = project.getValidationMessage();
 			
+			System.out.println("Checking validation");
 			Assert.assertEquals(actualMessage, expectedMessage);
 		}
 		else
@@ -108,16 +126,21 @@ public class VerifyStartEndDateValidation extends TestBase {
 		 {
 	    	
 		    if(result.getStatus() == ITestResult.SUCCESS)
-		    {	
+		    {
+		    	System.out.println("Test Case Passed");
 		    	TestUtil.reportDataSetResult(TM_projectSuiteXls, this.getClass().getSimpleName(), count+2, "PASS");
 		    }
 	
 		    else if(result.getStatus() == ITestResult.FAILURE)
 		    {
+		    	
 		    	testPassed = false;
 		    	TestUtil.reportDataSetResult(TM_projectSuiteXls, this.getClass().getSimpleName(), count+2, "FAIL");
 				TestUtil.printComments(TM_projectSuiteXls, this.getClass().getSimpleName(), count+2, result.getThrowable().getMessage());				
 				TestUtil.takeScreenShot(this.getClass().getSimpleName(), this.getClass().getSimpleName());
+				
+				System.out.println("Test Case Failed");
+				result.getThrowable().printStackTrace();
 	
 		    }
 		    
@@ -147,12 +170,12 @@ public class VerifyStartEndDateValidation extends TestBase {
 		else
 			TestUtil.reportDataSetResult(TM_projectSuiteXls, "Test Cases", TestUtil.getRowNum(TM_projectSuiteXls,this.getClass().getSimpleName()), "PASS");
 		
-		/*try {
+		try {
 			utilRecorder.stopRecording();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 		
 		
 		
