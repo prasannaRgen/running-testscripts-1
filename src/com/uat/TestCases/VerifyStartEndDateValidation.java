@@ -73,9 +73,9 @@ public class VerifyStartEndDateValidation extends TestBase {
 		System.out.println("opening browser");
 		openBrowser();
 		
-		System.out.println("starting recording");
+		//System.out.println("starting recording");
 		
-		utilRecorder = new Utility();
+		/*utilRecorder = new Utility();
 		
 		try
 		{
@@ -87,7 +87,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 		catch (Exception e)
 		{
 			e.printStackTrace();
-		}
+		}*/
 		
 		Login login = new Login(eventfiringdriver);
 		
@@ -170,12 +170,12 @@ public class VerifyStartEndDateValidation extends TestBase {
 		else
 			TestUtil.reportDataSetResult(TM_projectSuiteXls, "Test Cases", TestUtil.getRowNum(TM_projectSuiteXls,this.getClass().getSimpleName()), "PASS");
 		
-		try {
+		/*try {
 			utilRecorder.stopRecording();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 		

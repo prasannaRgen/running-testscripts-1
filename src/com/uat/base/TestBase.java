@@ -6,6 +6,7 @@ package com.uat.base;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -29,6 +31,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 
+import com.google.common.collect.ImmutableMap;
 import com.uat.util.ErrorUtil;
 
 import com.uat.util.Xls_Reader;
@@ -175,7 +178,13 @@ public class TestBase {
 					driver = new FirefoxDriver();
 			}
 			else if (CONFIG.getProperty("browserType").equals("CHROME"))
-				 driver = new ChromeDriver();
+			{
+				if (!osName.startsWith("WINDOW"))
+					initializeForLinux();
+				else
+					driver = new ChromeDriver();
+			}
+				
 			
 			isBrowserOpened=true;
 			eventfiringdriver = new EventFiringWebDriver(driver);
@@ -196,13 +205,32 @@ public class TestBase {
 	{
 		String Xport = System.getProperty("lmportal.xvfb.id", ":1");
 
-		final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+		if(CONFIG.getProperty("browserType").equals("MOZILLA"))
+		{
+			final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
 
-		FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
+			FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
 
-		firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
-		FirefoxProfile firefoxProfile = new FirefoxProfile();
-		driver = new FirefoxDriver(firefoxBinary,firefoxProfile);
+			firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
+			FirefoxProfile firefoxProfile = new FirefoxProfile();
+			driver = new FirefoxDriver(firefoxBinary,firefoxProfile);
+		}
+		else if (CONFIG.getProperty("browserType").equals("CHROME"))
+		{
+			ChromeDriverService chromeDriverService = new ChromeDriverService.Builder()
+	        .usingDriverExecutable(new File("/usr/local/chromedriver"))
+	        .usingAnyFreePort().withEnvironment(ImmutableMap.of("DISPLAY", ":1")).build();
+			
+			try {
+				chromeDriverService.start();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			driver = new ChromeDriver(chromeDriverService);
+		}
+		
+		
 	}
 	
 	// close browser
