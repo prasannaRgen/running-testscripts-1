@@ -1,7 +1,10 @@
-21/03/2017 17:46:01 devpinoyLogger Loading Property files
-21/03/2017 17:46:01 devpinoyLogger Loaded Property files successfully
-21/03/2017 17:46:01 devpinoyLogger Loading XLS Files
-21/03/2017 17:46:01 devpinoyLogger Loaded XLS Files successfully
-21/03/2017 17:46:01 devpinoyLogger Beginning test case 'VerifyStartEndDateValidation'.
-21/03/2017 17:46:08 devpinoyLogger Trying login for role Version Lead
-21/03/2017 17:46:08 devpinoyLogger Role found in Users file. Fetching credentials
+22/03/2017 19:19:26 devpinoyLogger Loading Property files
+22/03/2017 19:19:26 devpinoyLogger Loaded Property files successfully
+22/03/2017 19:19:26 devpinoyLogger Loading XLS Files
+22/03/2017 19:19:26 devpinoyLogger Loaded XLS Files successfully
+22/03/2017 19:19:26 devpinoyLogger Beginning test case 'VerifyStartEndDateValidation'.
+22/03/2017 19:19:36 devpinoyLogger Trying login for role Test Manager
+22/03/2017 19:19:36 devpinoyLogger Role found in Users file. Fetching credentials
+22/03/2017 19:19:46 devpinoyLogger UAT Automation Projects Suite : is selected...
+22/03/2017 19:19:46 devpinoyLogger Project Create and Edit Portfolio : is selected...
+22/03/2017 19:19:47 devpinoyLogger Verify Start End Date : is selected...
