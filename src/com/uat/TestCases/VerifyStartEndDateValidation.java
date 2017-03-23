@@ -140,7 +140,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 				TestUtil.takeScreenShot(this.getClass().getSimpleName(), this.getClass().getSimpleName());
 				
 				System.out.println("Test Case Failed");
-				result.getThrowable().printStackTrace();
+				System.out.println(result.getThrowable().getMessage());
 	
 		    }
 		    
