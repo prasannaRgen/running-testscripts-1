@@ -25,7 +25,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 	String runmodes[]=null;
 	int count=-1;
 	private boolean testPassed = false;
-	Utility utilRecorder = new Utility();
+	
 	
 	// Runmode of test case in a suite
 	@BeforeTest
@@ -42,10 +42,12 @@ public class VerifyStartEndDateValidation extends TestBase {
 		}
 		runmodes=TestUtil.getDataSetRunmodes(TM_projectSuiteXls, this.getClass().getSimpleName());
 		
+		/*Utility utilRecorder = new Utility();
+		
 		if (osName.startsWith("WINDOW"))
 			utilRecorder.startRecording(System.getProperty("user.dir")+"\\Videos\\"+extractPackageName(this.getClass().getPackage().toString())+"\\"+this.getClass().getSimpleName());
 		else
-			utilRecorder.startRecording(System.getProperty("user.dir")+"/Videos/"+extractPackageName(this.getClass().getPackage().toString())+"/"+this.getClass().getSimpleName());
+			utilRecorder.startRecording(System.getProperty("user.dir")+"/Videos/"+extractPackageName(this.getClass().getPackage().toString())+"/"+this.getClass().getSimpleName());*/
 		
 				
 
@@ -145,12 +147,12 @@ public class VerifyStartEndDateValidation extends TestBase {
 		else
 			TestUtil.reportDataSetResult(TM_projectSuiteXls, "Test Cases", TestUtil.getRowNum(TM_projectSuiteXls,this.getClass().getSimpleName()), "PASS");
 		
-		try {
+		/*try {
 			utilRecorder.stopRecording();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 		
