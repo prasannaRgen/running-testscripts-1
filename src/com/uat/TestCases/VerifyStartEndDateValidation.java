@@ -104,6 +104,8 @@ public class VerifyStartEndDateValidation extends TestBase {
 			
 			waitForBlockUI();
 			
+			version = version + "." + Time.format(calendar.getTime());
+			
 			System.out.println("Creating new project");
 			project.createNewProject(groupName, portfolio, projectName, version, startDate, endDate, versionLead);
 			

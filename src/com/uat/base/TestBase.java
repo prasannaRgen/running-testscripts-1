@@ -61,9 +61,9 @@ public class TestBase {
 	public static WebDriverWait wait;
 	WebDriverWait wait1;
 	
-	Calendar calendar;
+	protected Calendar calendar;
 	SimpleDateFormat Date;
-	SimpleDateFormat Time;
+	protected SimpleDateFormat Time;
 	public static String screenshotDateTime;
 	
 	StackTraceElement[] stacktrace;
