@@ -53,6 +53,7 @@ public class Projects extends TestManagement {
 	public void saveProject()
 	{
 		this.driver.findElement(save_button).click();
+		waitForBlockUI();
 	}
 	
 	public void addGroup(String groupName)
