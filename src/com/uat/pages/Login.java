@@ -84,7 +84,8 @@ public class Login extends TestBase
 			e.getMessage();
 		}
 		
-		resetImplicitWait();		
+		resetImplicitWait();
+		waitForBlockUI();
 		
 		return true;
 		
