@@ -162,7 +162,7 @@ public class TestBase {
 	 */
 	public void openBrowser()
 	{
-		
+		 System.out.println("I am in");
 		if(!isBrowserOpened)
 		{
 			if (CONFIG.getProperty("browserType").equals("IE"))
