@@ -162,9 +162,10 @@ public class TestBase {
 	 */
 	public void openBrowser()
 	{
-		 System.out.println("I am in");
+		 System.out.println("I am in 1");
 		if(!isBrowserOpened)
 		{
+			System.out.println("I am in 2");
 			if (CONFIG.getProperty("browserType").equals("IE"))
 			{	
 				 System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\com\\uat\\config\\IEDriverServer.exe");
@@ -200,6 +201,7 @@ public class TestBase {
 			}
 				
 			
+			
 			isBrowserOpened=true;
 			eventfiringdriver = new EventFiringWebDriver(driver);
 			eventfiringdriver.manage().window().maximize();
@@ -212,7 +214,7 @@ public class TestBase {
 			  
 			 
 		}
-
+		System.out.println("I am in 3");
 	}
 	
 	private void initializeForLinux()
