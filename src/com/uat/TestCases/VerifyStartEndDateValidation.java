@@ -49,11 +49,11 @@ public class VerifyStartEndDateValidation extends TestBase {
 
 	}
 	
-	@BeforeMethod
+	/*@BeforeMethod
 	public void initializeEnv()
 	{		
 		openBrowser();
-	}
+	}*/
 	
 	@Test(dataProvider="getTestData")
 	public void verifyStartEndDateValidation(String role, String groupName, String portfolio, String projectName, String version, 
