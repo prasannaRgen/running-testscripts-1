@@ -133,7 +133,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 		    	TestUtil.reportDataSetResult(TM_projectSuiteXls, this.getClass().getSimpleName(), count+2, "PASS");
 		    }
 	
-		    else if(result.getStatus() == ITestResult.FAILURE)
+		    /*else if(result.getStatus() == ITestResult.FAILURE)
 		    {
 		    	
 		    	testPassed = false;
@@ -144,7 +144,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 				System.out.println("Test Case Failed");
 				System.out.println(result.getThrowable().getMessage());
 	
-		    }
+		    }*/
 		    
 		    else if(result.getStatus() == ITestResult.SKIP ){	
 		    	 
