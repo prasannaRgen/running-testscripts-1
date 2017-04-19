@@ -72,7 +72,6 @@ public class VerifyStartEndDateValidation extends TestBase {
 		
 		System.out.println("opening browser");
 		openBrowser();
-		System.out.println("opening browser ends");
 		//System.out.println("starting recording");
 		
 		/*utilRecorder = new Utility();

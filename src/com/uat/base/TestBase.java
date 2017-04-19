@@ -162,39 +162,39 @@ public class TestBase {
 	 */
 	public void openBrowser()
 	{
-		 System.out.println("I am in 1");
+		 
 		if(!isBrowserOpened)
 		{
-			System.out.println("I am in 2");
+			
 			if (CONFIG.getProperty("browserType").equals("IE"))
 			{	
 				 System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\com\\uat\\config\\IEDriverServer.exe");
-				 System.out.println("I am in IE");
+				 
 				 driver = new InternetExplorerDriver();
-				 System.out.println("I got IE");
+				
 			}    
 			else if(CONFIG.getProperty("browserType").equals("MOZILLA"))
 			{	
 				if (!osName.startsWith("WINDOW"))
 				{
-					System.out.println("I am in Mozilla");
+					
 					initializeForLinux();
-					System.out.println("I am in Mozilla1111");
+					
 				}
 				else
 				{
-					System.out.println("I am in FirefoxDriver");
+					
 					driver = new FirefoxDriver();
-					System.out.println("I am in FirefoxDriver111");
+					
 				}
 			}
 			else if (CONFIG.getProperty("browserType").equals("CHROME"))
 			{
 				if (!osName.startsWith("WINDOW"))
 				{
-					System.out.println("I am in CHROME");
+					
 					initializeForLinux();
-					System.out.println("I am in CHROME111");
+					
 				}
 				else
 					driver = new ChromeDriver();
@@ -214,7 +214,7 @@ public class TestBase {
 			  
 			 
 		}
-		System.out.println("I am in 3");
+		
 	}
 	
 	private void initializeForLinux()
