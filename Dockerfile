@@ -1,4 +1,9 @@
 FROM centos:7
+
+WORKDIR /app
+
+COPY . /app
+
 RUN cd /usr/local
 RUN yum install -y deltarpm
 RUN yum install -y wget
@@ -12,6 +17,8 @@ RUN yum install -y xorg-x11-server-Xvfb-1.17.2-22.el7.x86_64.rpm
 RUN yum install -y gtk3.x86_64
 RUN Xvfb :1 -screen 0 1024x768x24 &
 RUN rm -rf /.cache
+ 
+ 
 
 
 
