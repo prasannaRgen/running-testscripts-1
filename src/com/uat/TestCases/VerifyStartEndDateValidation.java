@@ -121,7 +121,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 	}
 	
 	
-	@AfterMethod
+	/*@AfterMethod
 	public void afterMethod(ITestResult result)
 	{
 	    try
@@ -144,7 +144,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 				System.out.println("Test Case Failed");
 				System.out.println(result.getThrowable().getMessage());
 	
-		    }*/
+		    }
 		    
 		    else if(result.getStatus() == ITestResult.SKIP ){	
 		    	 
@@ -181,7 +181,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 		
 		
 		
-	}
+	}*/
 	
 	@DataProvider
 	public Object[][] getTestData(){
