@@ -121,7 +121,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 	}
 	
 	
-	/*@AfterMethod
+	@AfterMethod
 	public void afterMethod(ITestResult result)
 	{
 	    try
@@ -133,7 +133,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 		    	TestUtil.reportDataSetResult(TM_projectSuiteXls, this.getClass().getSimpleName(), count+2, "PASS");
 		    }
 	
-		    /*else if(result.getStatus() == ITestResult.FAILURE)
+		    else if(result.getStatus() == ITestResult.FAILURE)
 		    {
 		    	
 		    	testPassed = false;
@@ -181,7 +181,7 @@ public class VerifyStartEndDateValidation extends TestBase {
 		
 		
 		
-	}*/
+	}
 	
 	@DataProvider
 	public Object[][] getTestData(){
