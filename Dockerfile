@@ -1,8 +1,8 @@
 FROM centos:7
 
-WORKDIR /app
+WORKDIR /home
 
-COPY . /app
+COPY . /home
 
 RUN cd /usr/local
 RUN yum install -y deltarpm
