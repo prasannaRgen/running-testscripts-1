@@ -1,10 +1,10 @@
 FROM centos:7
 
-RUN yum install -y git
-RUN git clone https://github.com/d-apurva/running-testscripts-1.git
 WORKDIR /app
 ADD . /app
-
+RUN cd /app
+RUN yum install -y git
+RUN git clone https://github.com/d-apurva/running-testscripts-1.git
 RUN cd /usr/local
 RUN yum install -y deltarpm
 RUN yum install -y wget
