@@ -18,8 +18,9 @@ RUN yum install -y xorg-x11-server-Xvfb-1.17.2-22.el7.x86_64.rpm
 RUN yum install -y gtk3.x86_64
 RUN Xvfb :1 -screen 0 1024x768x24 &
 RUN rm -rf /.cache
+RUN  java -cp "./bin:./NewJars/*" org.testng.TestNG ./testng.
  
- 
+
 
 
 
